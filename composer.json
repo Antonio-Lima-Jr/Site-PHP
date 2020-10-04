@@ -1,0 +1,35 @@
+{
+    "name": "zucdeveloper/zucdeveloper",
+    "description": "Empresa de web designer e marketing digital",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Antonio P. F. Jr",
+            "email": "zucdeveloper@gmail.com",
+            "role": "Dveloper",
+            "homepage": "https://zucdeveloper.com"
+            
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        },
+        "files": [
+            "source/Config.php"
+        ]
+    },
+    "require": {
+        "php": "^7.3",
+        "ext-pdo": "*",
+        "coffeecode/datalayer": "1.1.*",
+        "coffeecode/router": "1.0.*",
+        "league/plates": "v4.0.0-alpha",
+        "coffeecode/optimizer": "2.0.*",
+        "monolog/monolog": "2.0.*"
+    }
+}

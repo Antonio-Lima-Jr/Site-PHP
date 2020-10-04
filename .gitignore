@@ -1,0 +1,10 @@
+#files
+composer.lock
+composer.phar
+Config.php
+
+
+#folder
+/vendor/
+/theme/script/jquery.js
+/theme/img/
