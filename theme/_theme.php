@@ -2,16 +2,32 @@
 <html lang="pt-BR">
 
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179583186-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-179583186-1');
+</script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <?= $head; ?>
-  <link rel="stylesheet" href="<?= url("/theme/css/style.css") ?>">
+  <?=  $v->section("style");?>
+  <?=  $v->section("ads");?>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="<?= url("/theme/img/favicon.ico"); ?>" />
 </head>
 
 <body>
+          
+  <div class="watsFixed">
+    <img onclick="abrirWats()" src="<?= url("/theme/img/home/iconWatsVerde.svg"); ?>" alt="">
+  </div>
+
   <div class="load"><img src="<?= url("/theme/img/loadder.svg"); ?>" alt=""></div>
   <base base="<?= url() ?>">
   </base>
@@ -58,7 +74,8 @@
           <ul>
             <li><a href="<?= url(); ?>" rel="external dofollows">HOME</a></li>
             <li><a href="<?= url("/sobre"); ?>" rel="external dofollows">SOBRE</a></li>
-            <li><a href="<?= url("/portifolio"); ?>" rel="external dofollows">PORTIFÓLIO</a></li>
+            <li><a href="<?= url("/portfolio"); ?>" rel="external dofollows">PORTFÓLIO</a></li>
+            <li><a href="<?= url("/blog"); ?>" rel="external dofollows">BLOG</a></li>
             <li><a href="<?= url("/contato"); ?>" rel="external dofollows">CONTATO</a></li>
           </ul>
         </nav>
@@ -73,7 +90,8 @@
       <ul>
         <li><a href="<?= url(); ?>" rel="external dofollows">HOME</a></li>
         <li><a href="<?= url("/sobre "); ?>" rel="external dofollows">SOBRE</a></li>
-        <li><a href="<?= url("/portifolio"); ?>" rel="external dofollows">PORTIFÓLIO</a></li>
+        <li><a href="<?= url("/portfolio"); ?>" rel="external dofollows">PORTFÓLIO</a></li>
+        <li><a href="<?= url("/blog"); ?>" rel="external dofollows">BLOG</a></li>
         <li><a href="<?= url("/contato"); ?>" rel="external dofollows">CONTATO</a></li>
       </ul>
     </nav><!-- toogleBar -->
@@ -97,7 +115,8 @@
             </li>
             <li><a href="<?= url(); ?>" rel="external dofollows">HOME</a></li>
             <li><a href="<?= url("/sobre"); ?>" rel="external dofollows">SOBRE</a></li>
-            <li><a href="<?= url("/portifolio"); ?>" rel="external dofollows">PORTIFÓLIO</a></li>
+            <li><a href="<?= url("/portfolio"); ?>" rel="external dofollows">PORTFÓLIO</a></li>
+            <li><a href="<?= url("/blog"); ?>" rel="external dofollows">BLOG</a></li>
             <li><a href="<?= url("/contato"); ?>" rel="external dofollows">CONTATO</a></li>
           </ul>
         </nav>

@@ -1,4 +1,8 @@
 <?php  $v->layout("_theme"); ?>
+<?= $v->start("style") ?>
+  <link rel="stylesheet" href="<?= url("/theme/css/style.css") ?>">
+<?= $v->end() ?>
+
 <div class="error">
   <h2>OOOOOPS</h2>
   <h2>erro <?= $error ?>! </h2>

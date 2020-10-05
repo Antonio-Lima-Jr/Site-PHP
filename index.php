@@ -17,7 +17,7 @@ $router->namespace( 'Source\App' );
 $router->group( null );
 $router->get( '/', 'Web:home' );
 $router->get('/sobre' , 'Web:sobre');
-$router->get('/portifolio' , 'Web:portifolio');
+$router->get('/portfolio' , 'Web:portifolio');
 
 
 /**
@@ -26,6 +26,14 @@ $router->get('/portifolio' , 'Web:portifolio');
 $router->group( "contato" );
 $router->get( '/', 'Web:contact' );
 $router->post( '/client', 'Form:client' );
+
+/**
+ * blog
+ */
+
+$router->group( "blog" );
+$router->get( "/", "Blog:home");
+$router->get( "/{titulo}", "Blog:article");
 
 
 /**

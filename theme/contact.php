@@ -1,5 +1,9 @@
 <?php  $v->layout("_theme"); ?>
 
+<?= $v->start("style") ?>
+  <link rel="stylesheet" href="<?= url("/theme/css/style.css") ?>">
+<?= $v->end() ?>
+
 <section class="bannerContato">
   <div class="overlayer">
     <div class="container">

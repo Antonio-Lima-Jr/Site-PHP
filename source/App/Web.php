@@ -27,7 +27,7 @@ class Web
   {
     $head = $this->seo->render(
       // titulo
-      "Home | ". SITE,
+      "Home | ". SITE . " desenvolvimento de sites com SEO otimizado, blogs e programação Web em geral ",
       // descrição
       "ZucDeveloper desenvolvimento de sites com SEO otimizado, bonito e seguro para o seu negócio em PHP, Html5, Css3 e Javascript",
       // url
@@ -45,11 +45,11 @@ class Web
   {
     $head = $this->seo->render(
       // titulo
-      "Contato | ". SITE,
+      "Contato | ". SITE ." desenvolvimento de sites com SEO otimizado, blogs e programação Web em geral ",
       // descrição
       "ZucDeveloper desenvolvimento de sites otimizado, bonito e seguro para o seu negócio em PHP, Html5, Css3 e Javascript",
       // url
-      url("contato"),
+      url("/contato"),
       // image
       url("/theme/img/bannerSeo/BannerLogo.jpg")
     );
@@ -63,11 +63,11 @@ class Web
   {
     $head = $this->seo->render(
       // titulo
-      "Sobre | ". SITE,
+      "Sobre | ". SITE . " desenvolvimento de sites com SEO otimizado, blogs e programação Web em geral ",
       // descrição
       "ZucDeveloper desenvolvimento de sites com SEO otimizado, bonito e seguro para o seu negócio em PHP, Html5, Css3 e Javascript",
       // url
-      url(),
+      url("/sobre"),
       // image
       url("/theme/img/bannerSeo/BannerLogo.jpg")
     );
@@ -81,11 +81,11 @@ public function portifolio()
 {
   $head = $this->seo->render(
     // titulo
-    "Contato | ". SITE,
+    "Contato | ". SITE . " desenvolvimento de sites com SEO otimizado, blogs e programação Web em geral ",
     // descrição
     "ZucDeveloper desenvolvimento de sites com SEO otimizado, bonito e seguro para o seu negócio em PHP, Html5, Css3 e Javascript",
     // url
-    url(),
+    url("/portfolio"),
     // image
     url("/theme/img/bannerSeo/BannerLogo.jpg")
   );
@@ -99,7 +99,7 @@ public function portifolio()
 
     $head = $this->seo->render(
       // titulo
-      "Error {$data['errcode']} | ". SITE,
+      "Error {$data['errcode']} | ". SITE . " desenvolvimento de sites com SEO otimizado, blogs e programação Web em geral ",
       // descrição
       "ZucDeveloper desenvolvimento de sites com SEO otimizado, bonito e seguro para o seu negócio em PHP, Html5, Css3 e Javascript",
       // url

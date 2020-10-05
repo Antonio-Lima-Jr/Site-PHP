@@ -1,4 +1,4 @@
-(() => {
+(() => { const INCLUDE_PATH = $('base').attr('base')
 	// ---------------------------Header
 
 var toogleCount = false

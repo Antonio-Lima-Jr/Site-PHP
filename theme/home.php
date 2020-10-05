@@ -1,6 +1,10 @@
 <?php  $v->layout( '_theme' );
 ?>
 
+<?= $v->start("style") ?>
+  <link rel="stylesheet" href="<?= url("/theme/css/style.css") ?>">
+<?= $v->end() ?>
+
 <section id='perspectiva' class='backHome '>
   <div id='distorcao' class='container '>
     <div class='home'>
@@ -47,7 +51,7 @@
         <img src='<?= url('/theme/img/sectionSubHome/friends.svg'); ?>' alt='Icone Friends em SVG' width='50px'>
         <div class='textoVenda'>
           <h1>ATENDIMENTO PERSONALIZADO</h1>
-          <h2>O seu projeto de acordo com as suas regras de negócio</h2>
+          <h2>O seu projeto de acordo com a sua regra de negócio</h2>
         </div><!-- textoVenda -->
       </div><!-- atendimento -->
       <div class='atendimento'>

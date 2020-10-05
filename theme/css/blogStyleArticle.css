@@ -1,0 +1,141 @@
+
+body{
+  background-color: #DDDDDD;
+}
+
+.bannerBlog{
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+.bannerBlog .overlayerBlog{
+  background-color: rgba(0,0,0,0.5);
+  height: 100%;
+}
+.bannerBlog h1{
+  position: relative;
+  width: max-content;
+  top: 150px;
+  left: 2%;
+  color: rgb(207, 207, 207);
+  font-size: 40px;
+  font-weight: 400;
+}
+
+
+div.blogMain{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 30px;
+  position: relative;
+  top :-100px;
+  background-color: #DDDDDD;
+  border-radius: 20px;
+}
+article {
+background-color: white;
+margin: 25px 0 25px 25px;
+border-radius: 20px;
+-webkit-box-shadow: 0px 10px 31px -4px rgba(0,0,0,0.61);
+-moz-box-shadow: 0px 10px 31px -4px rgba(0,0,0,0.61);
+box-shadow: 0px 10px 31px -4px rgba(0,0,0,0.61);
+} 
+article img{
+  border-radius: 20px;
+  width: 100%;
+  -webkit-box-shadow: 0px 10px 31px -4px rgba(0,0,0,0.61);
+-moz-box-shadow: 0px 10px 31px -4px rgba(0,0,0,0.61);
+box-shadow: 0px 10px 31px -4px rgba(0,0,0,0.61);
+} 
+article h1{
+padding: 20px;
+color: rgb(122, 122, 122);
+font-weight: 400;
+margin-top: 30px;
+} 
+article h3{
+padding: 20px;
+color: rgb(75, 75, 75);
+margin-left: 150px;
+font-weight: 400;
+
+} 
+article small{
+padding: 20px;
+color: rgb(75, 75, 75);
+margin-left: 150px;
+font-weight: 400;
+
+} 
+article p{
+padding: 20px;
+color: rgb(51, 51, 51);
+
+font-weight: 300;
+
+} 
+.promocoes{
+  background-color: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 10px 31px -4px rgba(0,0,0,0.61);
+-moz-box-shadow: 0px 10px 31px -4px rgba(0,0,0,0.61);
+box-shadow: 0px 10px 31px -4px rgba(0,0,0,0.61);
+margin-right: 25px;
+height: max-content;
+margin-top: 25px;
+
+}
+.redesSociaisBlog h1{
+  font-weight: 400;
+  color: rgb(122, 122, 122);
+  padding: 20px;
+}
+.redesSociaisBlog p{
+  font-weight: 300;
+  font-size: 15px;
+  color: rgb(122, 122, 122);
+  padding: 10px;
+  margin: 0px 10px 0 20px;
+}
+.inconesDasRedesBlog {
+  position: relative;
+  width: max-content;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.inconesDasRedesBlog img{
+  width: 30px;
+  cursor: pointer;
+  margin: 0 10px 10px 10px;
+}
+
+@media screen and (max-width: 800px){
+  .promocoes{
+    display: none;
+  }
+  div.blogMain{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    position: relative;
+    top :-100px;
+    background-color: #DDDDDD;
+    border-radius: 20px;
+  }
+  article{
+    margin: 25px 25px 25px 25px;
+  }
+}
+@media screen and (max-width: 600px){
+
+  article h3{
+    margin-left: 50px;
+    
+    } 
+    article small{
+    margin-left: 50px;
+    
+    } 
+}
