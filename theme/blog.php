@@ -7,8 +7,8 @@
 <?= $v->end() ?>
 
 <?= $v->start( 'style' ) ?>
-  <link rel='stylesheet' href='<?= url('/theme/css/style.css') ?>'>
-  <link rel='stylesheet' href='<?= url('/theme/css/blogStyle.css') ?>'>
+  <link rel='stylesheet' href='<?= url('/theme/css/style.css'); ?>'>
+  <link rel='stylesheet' href='<?= url('/theme/css/blogStyle.css'); ?>'>
 <?= $v->end() ?>
 
 <div class='bannerBlog'>
@@ -30,7 +30,7 @@
       <div class='alignPost'>
         <a href="<?= url("/blog". "/". $urlTratamento ); ?>">
           <article class='post'>
-            <img src="<?= url('/' . $post->cover) ?>" alt='' title='' />
+            <img src="<?= url('/' . $post->cover); ?>" alt='<?= $post->title; ?>' />
             <div class='body'>
               <h1>
                 <?=$post->title;?>
@@ -60,7 +60,7 @@ endif;
             <img src='<?= url('/theme/img/bannerBlog/icones/iconFace.svg'); ?>' alt='icone svg do facebook'>
           </a>
           <a href='https://www.instagram.com/zucdeveloper'>
-            <img src='<?= url('/theme/img/bannerBlog/icones/iconInsta.svg'); ?>' alt=''>
+            <img src='<?= url('/theme/img/bannerBlog/icones/iconInsta.svg'); ?>' alt='icone svg do Instagram'>
           </a>
           <a href='https://www.linkedin.com/in/ant%C3%B4nio-jr-250a841b5/'>
             <img src='<?= url('/theme/img/bannerBlog/icones/iconLinked.svg'); ?>' alt='icone svg do linked'>
@@ -75,7 +75,7 @@ endif;
       $urlTratamento = str_replace(' ', '-', $urlTratamento);
 ?>
    
-        <a href="<?= url("/blog/{$urlTratamento}") ?>"><p><?=$post->title;?></p></a> 
+        <a href="<?= url("/blog/{$urlTratamento}"); ?>" title="<?= $post->title; ?>"><p><?= $post->title; ?> </p></a> 
     
 <?php
     endforeach;

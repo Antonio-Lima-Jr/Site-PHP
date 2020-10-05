@@ -21,7 +21,7 @@
     <?php if($post): ?>
 
       <article>
-        <img src="<?= url('/'.$post->cover) ?>" alt="">
+        <img src="<?= url('/'.$post->cover); ?>" alt="<?= $post->title; ?>">
         <div class="body">
           <h1><?= $post->title ?></h1>
           <h3><i><?= $post->description ?></i></h3>
@@ -55,7 +55,7 @@
       $urlTratamento = str_replace(' ', '-', $urlTratamento);
 ?>
 
-     <a href="<?= url("/blog/{$urlTratamento}") ?>"><p><?=$post->title;?></p></a> 
+     <a href="<?= url("/blog/{$urlTratamento}"); ?>" title="<?= $post->title; ?>" ><p><?= $post->title; ?></p></a> 
 
 <?php
     endforeach;
