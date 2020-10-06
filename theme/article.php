@@ -66,6 +66,41 @@
   </div><!-- blogMain -->
 </div><!-- container -->
 
+
+<div class="container">
+  <div class="card">
+  <h1 class="TitleComent">Deixe seu comentário</h1>
+
+  <div class="alert">
+    <p><b>Atenção:</b> Os comentários abaixo não representam as ideias zucDeveloper.</p>
+  </div><!-- alert -->
+  <form class="inputComentarios" >
+    <input type="text" name="name" placeholder="Nome">
+    <textarea  name="w3review" placeholder="Mensagem"></textarea>
+    <button>Enviar!</button>
+  </form><!-- inputComentarios -->
+
+
+  <div class="boxComentarios">
+    <h1 class="contComentarios">Comentários</h1>
+
+    <div class="coments">
+      <h1>Antonio</h1><small> 18 de agosto de 2020 02:35</small>
+      <p>Ótimo Conteúdo</p>
+    </div>
+    <div class="coments">
+      <h1>Antonio</h1><small>18 de agosto de 2020 02:35</small>
+      <p>Ótimo Conteúdo</p>
+    </div>
+    <div class="coments">
+      <h1>Antonio</h1><small>18 de agosto de 2020 02:35</small>
+      <p>Ótimo Conteúdo</p>
+    </div>
+  </div><!-- comentarios -->
+  </div><!-- card -->
+
+</div>
+
 <?php $v->start( 'js' ); ?>
   <script src='<?= url('/theme/script/abrirWats.js'); ?>'></script>
   <script src='<?= url('/theme/script/script.js'); ?>'></script>
