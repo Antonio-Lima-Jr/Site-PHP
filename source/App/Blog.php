@@ -6,6 +6,7 @@ use Source\Models\Post;
 use Source\Support\Seo;
 use League\Plates\Engine;
 use Source\Models\Coment;
+use Source\Support\TratURI;
 use Source\Support\DateFormat;
 
 class Blog
@@ -53,24 +54,22 @@ class Blog
   public function article($data)
   {
     // limpar input de codigo malicioso
-    $subPor1 = str_replace("-", "1", $data["titulo"]);
-    $titulo = filter_var( $subPor1, FILTER_SANITIZE_STRIPPED);
-    $inputClean = str_replace("1", "-",$titulo);
+    $result =  TratURI::getInputUri($data["titulo"]);
+
  
     // listagem no Banco de dados
     $posts = $this->post->find()->fetch(true);
     // comparando URI com os titulos no banco de dados
     foreach ($posts as $post) {
-      $urlTratamentoServer = str_replace('.', '', $post->title);
-      $urlTratamentoServer = str_replace(' ', '-', $urlTratamentoServer);
-      if ($inputClean == $urlTratamentoServer){
+      $urlTratamentoServer = TratURI::getDbUri($post->title);
+      if ($result == $urlTratamentoServer){
         $head = $this->seo->render(
           // titulo
           "Blog | ". SITE . " " . $post->title,
           // descrição
           $post->description,
           // url
-          url("/blog". "/" . $inputClean ),
+          url("/blog". "/" . $result ),
           // image
           url($post->cover)
         );

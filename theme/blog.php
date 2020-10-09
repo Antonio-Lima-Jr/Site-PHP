@@ -1,5 +1,6 @@
 <?php
   use Source\Support\DateFormat;
+  use Source\Support\TratURI;
   $v->layout( '_theme' );
 ?>
 
@@ -22,8 +23,7 @@
 <?php
   if ( $posts ):
     foreach ( $posts as $post ):
-      $urlTratamento = str_replace('.', '', $post->title);
-      $urlTratamento = str_replace(' ', '-', $urlTratamento);
+      $urlTratamento = TratURI::getDbUri($post->title);
 ?>     
       <div class='alignPost'>
         <a href="<?= url("/blog". "/". $urlTratamento ); ?>" title="<?= $post->title; ?>">
@@ -69,8 +69,7 @@ endif;
 <?php
   if ( $posts ):
     foreach ( $posts as $post ):
-      $urlTratamento = str_replace('.', '', $post->title);
-      $urlTratamento = str_replace(' ', '-', $urlTratamento);
+      $urlTratamento = TratURI::getDbUri($post->title);
 ?>
    
         <a href="<?= url("/blog/{$urlTratamento}"); ?>" title="<?= $post->title; ?>"><p><?= $post->title; ?> </p></a> 
@@ -91,3 +90,4 @@ endif;
 
 
 <?php $v->end(); ?>
+use Source\Support\TratURI;
