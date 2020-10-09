@@ -28,9 +28,9 @@
       $urlTratamento = str_replace(' ', '-', $urlTratamento);
 ?>     
       <div class='alignPost'>
-        <a href="<?= url("/blog". "/". $urlTratamento ); ?>">
+        <a href="<?= url("/blog". "/". $urlTratamento ); ?>" title="<?= $post->title; ?>">
           <article class='post'>
-            <img src="<?= url('/' . $post->cover); ?>" alt='<?= $post->title; ?>' />
+            <img src="<?= url('/' . $post->cover); ?>" title="<?= $post->title; ?>" alt='<?= $post->title; ?>' />
             <div class='body'>
               <h1>
                 <?=$post->title;?>
@@ -56,16 +56,16 @@ endif;
       <div class='redesSociaisBlog'>
         <h1>Siga-nos nas redes sociais!</h1>
         <div class='inconesDasRedesBlog'>
-          <a href='https://www.facebook.com/zuc.dev.9'>
-            <img src='<?= url('/theme/img/bannerBlog/icones/iconFace.svg'); ?>' alt='icone svg do facebook'>
+          <a href='https://www.facebook.com/zuc.dev.9' title="Designer de sites e blog personalizados com SEO aprimorado">
+            <img src='<?= url('/theme/img/bannerBlog/icones/iconFace.svg'); ?>' title="Site para aumentar lucro de negócio nas reses sociais" alt='Site para aumentar lucro de negócio nas reses sociais'>
           </a>
-          <a href='https://www.instagram.com/zucdeveloper'>
-            <img src='<?= url('/theme/img/bannerBlog/icones/iconInsta.svg'); ?>' alt='icone svg do Instagram'>
+          <a href='https://www.instagram.com/zucdeveloper' title="Sites responsivos com SEO otimizado">
+            <img src='<?= url('/theme/img/bannerBlog/icones/iconInsta.svg'); ?>' title="Produção de sites com SEO aprimorado e personalizado" alt='Produção de sites com SEO aprimorado e personalizado'>
           </a>
-          <a href='https://www.linkedin.com/in/ant%C3%B4nio-jr-250a841b5/'>
-            <img src='<?= url('/theme/img/bannerBlog/icones/iconLinked.svg'); ?>' alt='icone svg do linked'>
+          <a href='https://www.linkedin.com/in/ant%C3%B4nio-jr-250a841b5/' title="Faça sua marca ganhar visibilidade">
+            <img src='<?= url('/theme/img/bannerBlog/icones/iconLinked.svg'); ?>' title="Criar layout com HTML, JAVASCRIPT e CSS" alt='Criar layout com HTML, JAVASCRIPT e CSS'>
           </a>
-          <img onclick='abrirWats()' src='<?= url('/theme/img/bannerBlog/icones/iconWats.svg'); ?>' alt=''>
+          <img onclick='abrirWats()' src='<?= url('/theme/img/bannerBlog/icones/iconWats.svg'); ?>' title="Programação para a sua regra de negócio" alt='Programação para a sua regra de negócio'>
         </div><!-- inconesDasRedesBlog -->
         <h1>Artigos</h1>
 <?php

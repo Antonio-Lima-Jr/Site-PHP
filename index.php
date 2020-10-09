@@ -34,6 +34,8 @@ $router->post( '/client', 'Form:client' );
 $router->group( "blog" );
 $router->get( "/", "Blog:home");
 $router->get( "/{titulo}", "Blog:article");
+$router->post( "/coments", "Blog:coments");
+$router->post( "/getcoments", "Blog:getComents");
 
 
 /**

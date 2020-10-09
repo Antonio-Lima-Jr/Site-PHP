@@ -13,7 +13,8 @@ a{
 }
 .watsFixed{
 	position: fixed;
-	right: 25px;
+	right:  25px;
+	left: auto;
 	bottom: 25px;
 	z-index: 1000;
 	width: 60px;

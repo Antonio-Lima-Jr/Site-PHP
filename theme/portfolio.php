@@ -12,44 +12,45 @@
   </div>
 </section>
 
-<section class="portifolio">
-  <div class="container">
-    <div class="topAgencia">
+<section class='portifolio'>
+  <div class='container'>
+    <div class='topAgencia'>
       <h1>SITES</h1>
-      <h1 class="styleAgencia">DISPONÍVEIS</h1>
-      <div class="linhaTituloAgencia"></div>
+      <h1 class='styleAgencia'>DISPONÍVEIS</h1>
+      <div class='linhaTituloAgencia'></div>
     </div><!-- topAgencia -->
-    <div class="projetos">
-      <div class="projetoPortifolio">
+    <div class='projetos'>
+      <div class='projetoPortifolio'>
 
-        <a href="http://kinow.epizy.com/?i=1">
-          <img id="site2" src="<?= url("/theme/img/portifolio/kinown.jpg"); ?>" alt="" srcset="" width="100%">
+        <a href='http://kinow.epizy.com/?i=1' title="Quero um site bonito zucdeveloper">
+          <img id='site2' src='<?= url('/theme/img/portifolio/kinown.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
         </a>
-        <a href="http://www.beautif.ga/">
-          <img id="site2" src="<?= url("/theme/img/portifolio/beautif.jpg"); ?>" alt="" srcset="" width="100%">
+        <a href='http://www.beautif.ga/' title="Quero um site bonito zucdeveloper">
+          <img id='site2' src='<?= url('/theme/img/portifolio/beautif.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
         </a>
-        <a href="http://www.girlys.ga/?i=1">
-          <img id="site2" src="<?= url("/theme/img/portifolio/girlys.jpg"); ?>" alt="" srcset="" width="100%">
+        <a href='http://www.girlys.ga/?i=1'>
+          <img id='site2' src='<?= url('/theme/img/portifolio/girlys.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
         </a>
-        <a href="http://www.itsys.ga/?i=1">
-          <img id="site2" src="<?= url("/theme/img/portifolio/itsys.jpg"); ?>" alt="" srcset="" width="100%">
+        <a href='http://www.itsys.ga/?i=1'>
+          <img id='site2' src='<?= url('/theme/img/portifolio/itsys.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
         </a>
-        <a href="http://www.scenica.ga/?i=1">
-          <img id="site2" src="<?= url("/theme/img/portifolio/scenica.jpg"); ?>" alt="" srcset="" width="100%">
+        <a href='http://www.scenica.ga/?i=1'>
+          <img id='site2' src='<?= url('/theme/img/portifolio/scenica.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
         </a>
-        <a href="http://bluesk.ga/">
-          <img id="site2" src="<?= url("/theme/img/portifolio/bluesk.jpg"); ?>" alt="" srcset="" width="100%">
+        <a href='http://bluesk.ga/'>
+          <img id='site2' src='<?= url('/theme/img/portifolio/bluesk.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
         </a>
-        <a href="http://tastys.ga/">
-          <img id="site2" src="<?= url("/theme/img/portifolio/tastys.jpg"); ?>" alt="" srcset="" width="100%">
+        <a href='http://tastys.ga/'>
+          <img id='site2' src='<?= url('/theme/img/portifolio/tastys.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
         </a>
-        <a href="http://www.beblack.ga/?i=1">
-          <img id="site1" src="<?= url("/theme/img/portifolio/site1.jpg"); ?>" alt="" srcset="" width="100%">
+        <a href='http://www.beblack.ga/?i=1'>
+          <img id='site1' src='<?= url('/theme/img/portifolio/site1.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
         </a>
         </><!-- projetosPortifolio -->
       </div><!-- Projetos -->
     </div><!-- Container -->
 </section><!-- portifolio -->
+
 
 
 <section class="duvidas">
@@ -63,35 +64,37 @@
       <h2>Entre em contato conosco.</h2>
     </div>
     <div class='imgRedes'>
-      <a href='https://www.facebook.com/zuc.dev.9'>
+      <a href='https://www.facebook.com/zuc.dev.9' title="Link para o Facebook">
         <div class='iconRede'>
-          <img src='<?= url('/theme/img/iconTop/iconFace.svg'); ?>' alt='' srcset=''>
+          <img src='<?= url('/theme/img/iconTop/iconFace.svg'); ?>'title="Orçamento de sites sem compromisso" alt='Orçamento de sites sem compromisso' srcset=''>
           <h1>Facebook</h1>
         </div>
       </a>
-      <a href="https://www.linkedin.com/in/ant%C3%B4nio-jr-250a841b5/">
+      <a href="https://www.linkedin.com/in/ant%C3%B4nio-jr-250a841b5/" title="Sites personalizados em Javasript, HTML, CSS">
         <div class='iconRede'>
-          <img src='<?= url('/theme/img/iconTop/iconLinked.svg'); ?>' alt='' srcset=''>
+          <img src='<?= url('/theme/img/iconTop/iconLinked.svg'); ?>' alt='Orçamento de blog sem compromisso' alt='Orçamento de blog sem compromisso' srcset=''>
           <h1>Linked</h1>
         </div>
       </a>
-      <div class='iconRede'>
-        <img src='<?= url('/theme/img/iconTop/iconInsta.svg'); ?>' alt='' srcset=''>
-        <h1>Instagram</h1>
-      </div>
+      <a href="https://www.instagram.com/zucdeveloper" title="Zucdeveloper criação de layouts personalizados">
+        <div class='iconRede'>
+          <img src='<?= url('/theme/img/iconTop/iconInsta.svg'); ?>' title="Produção de sites e blogs personalizados" alt='Produção de sites e blogs personalizados' srcset=''>
+          <h1>Instagram</h1>
+        </div>
+      </a>
       <div class='iconRede' onclick='abrirWats()'>
-        <img src='<?= url('/theme/img/iconTop/iconWats.svg'); ?>' alt='' srcset=''>
+        <img src='<?= url('/theme/img/iconTop/iconWats.svg'); ?>' title="Sites personalizados com SEO otimizados" alt='Sites personalizados com SEO otimizados' srcset=''>
         <h1>WatsApp</h1>
       </div>
     </div>
   </div>
 </section>
-<section id="portifolio" class="outroContato">
-  <div class="container">
+<section id='portifolio' class='outroContato'>
+  <div class='container'>
     <h1>FIQUE A VONTADE PARA ENTRAR EM CONTATO!</h1>
     <h2>Ligue ou mande uma mensagem sem compromisso.</h2>
-    <div class="buttonOutroContato" onclick="abrirWats()">
-      <img src="<?= url("/theme/img/home/iconWatsVerde.svg"); ?>" alt="">
+    <div class='buttonOutroContato' onclick='abrirWats()'>
+      <img src='<?= url('/theme/img/home/iconWatsVerde.svg'); ?>' title="Entrar em contato para fazer meu site" alt='Entrar em contato para fazer meu site'>
       <h1>61 99636-0059</h1>
     </div><!-- buttonHome -->
   </div><!-- Container -->
