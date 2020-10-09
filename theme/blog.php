@@ -2,9 +2,7 @@
   use Source\Support\DateFormat;
   $v->layout( '_theme' );
 ?>
-<?= $v->start( 'ads' ) ?>
-  <script data-ad-client='ca-pub-7300703075437353' async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
-<?= $v->end() ?>
+
 
 <?= $v->start( 'style' ) ?>
   <link rel='stylesheet' href='<?= url('/theme/css/style.css'); ?>'>
@@ -90,6 +88,6 @@ endif;
   <script src='<?= url('/theme/script/abrirWats.js'); ?>'></script>
   <script src='<?= url('/theme/script/script.js'); ?>'></script>
   <script src='<?= url('/theme/script/horaUsuario.js'); ?>'></script>
-  <script src='<?= url('/theme/script/redirectBlog.js'); ?>'></script>
+
 
 <?php $v->end(); ?>

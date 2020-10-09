@@ -21,6 +21,7 @@
   <?=  $v->section("ads");?>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="<?= url("/theme/img/favicon.ico"); ?>" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </head>
 
 <body>

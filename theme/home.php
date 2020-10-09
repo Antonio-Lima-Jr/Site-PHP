@@ -23,19 +23,19 @@
 
         <div class='homeDevices'>
           <div class='telaPequena'>
-            <img src='<?= url('/theme/img/home/deviceP.png'); ?>' title="Programação PHP JAVASCRIPT e CSS" alt="Programação PHP JAVASCRIPT e CSS" srcset=''>
+            <img class="lozad" src='<?= url('/theme/img/home/deviceP.png'); ?>' title="Programação PHP JAVASCRIPT e CSS" alt="Programação PHP JAVASCRIPT e CSS" srcset=''>
           </div>
           <div class='telaMedia'>
-            <img src='<?= url('/theme/img/home/deviceM.png'); ?>' title="Programação PHP JAVASCRIPT e CSS" alt="Programação PHP JAVASCRIPT e CSS" srcset=''>
+            <img class="lozad" src='<?= url('/theme/img/home/deviceM.png'); ?>' title="Programação PHP JAVASCRIPT e CSS" alt="Programação PHP JAVASCRIPT e CSS" srcset=''>
           </div>
 
           <div class='telagrande'>
-            <video src='<?= url('/theme/img/home/video/deviceG.mp4'); ?>' buffered autoplay loop muted></video>
+            <video class="lozad" src='<?= url('/theme/img/home/video/deviceG.mp4'); ?>' buffered autoplay loop muted></video>
           </div>
         </div>
 
         <div id='nuvem2'>
-          <img src='<?= url('/theme/img/home/nuvemHome2.png'); ?>' title="Produçao de sites personalizados e com SEO otimizado" alt='Produçao de sites personalizados e com SEO otimizado' srcset='' width='200px'>
+          <img class="lozad" src='<?= url('/theme/img/home/nuvemHome2.png'); ?>' title="Produçao de sites personalizados e com SEO otimizado" alt='Produçao de sites personalizados e com SEO otimizado' srcset='' width='200px'>
         </div>
       </div><!-- imgHome -->
     </div><!-- home -->
@@ -48,21 +48,21 @@
   <div class='container'>
     <div class='venda'>
       <div class='atendimento'>
-        <img src='<?= url('/theme/img/sectionSubHome/friends.svg'); ?>' title="Atendimento personalizado de acordo com seu projeto" alt='Atendimento personalizado de acordo com seu projeto' width='50px'>
+        <img class="lozad" src='<?= url('/theme/img/sectionSubHome/friends.svg'); ?>' title="Atendimento personalizado de acordo com seu projeto" alt='Atendimento personalizado de acordo com seu projeto' width='50px'>
         <div class='textoVenda'>
           <h1>ATENDIMENTO PERSONALIZADO</h1>
           <h2>O seu projeto de acordo com a sua regra de negócio</h2>
         </div><!-- textoVenda -->
       </div><!-- atendimento -->
       <div class='atendimento'>
-        <img src='<?= url('/theme/img/sectionSubHome/engrenagem.svg'); ?>' title="Equipe especializada em PHP JAVASCRIPT HTML CSS" alt='Equipe especializada em PHP JAVASCRIPT HTML CSS' width='50px'>
+        <img class="lozad" src='<?= url('/theme/img/sectionSubHome/engrenagem.svg'); ?>' title="Equipe especializada em PHP JAVASCRIPT HTML CSS" alt='Equipe especializada em PHP JAVASCRIPT HTML CSS' width='50px'>
         <div class='textoVenda'>
           <h1>EQUIPE ESPECIALIZADA</h1>
           <h2>Um profissional para cada estágio do projeto.</h2>
         </div><!-- textoVenda -->
       </div><!-- atendimento -->
       <div class='atendimento' onclick='abrirWats()'>
-        <img src='<?= url('/theme/img/home/iconWatsVerde.svg'); ?>' title="Zucdeveloper produção de sites personalizados"  alt='Zucdeveloper produção de sites personalizados' width='50px'>
+        <img class="lozad" src='<?= url('/theme/img/home/iconWatsVerde.svg'); ?>' title="Zucdeveloper produção de sites personalizados"  alt='Zucdeveloper produção de sites personalizados' width='50px'>
         <div class='textoVenda'>
           <h1>FACILIDADE DE CONTATO</h1>
           <h2>Clique aqui para conversarmos via WhatsApp</h2>
@@ -111,13 +111,13 @@
 
     </div><!-- corpoAgencia -->
     <div class='videosAgencia'>
-      <div class='videos'>
-        <iframe src='https://www.youtube.com/embed/qVUfDkb9_7E'></iframe>
+      <div class='videos' id="video01">
+     
       </div>
       <!-- VIdeos -->
-      <div class='videos'>
-        <iframe src='https://www.youtube.com/embed/NR5WlmPUFiA'></iframe>
-      </div>
+      <div class='videos' id='video02'>
+        
+      </div> -->
       <!-- Videos -->
     </div><!-- videosAgencia -->
   </div><!-- Container -->
@@ -128,7 +128,7 @@
     <h1>FIQUE A VONTADE PARA ENTRAR EM CONTATO!</h1>
     <h2>Ligue ou mande uma mensagem sem compromisso.</h2>
     <div class='buttonOutroContato' onclick='abrirWats()'>
-      <img src='<?= url('/theme/img/home/iconWatsVerde.svg'); ?>' title="Entrar em contato para fazer meu site" alt='Entrar em contato para fazer meu site'>
+      <img class="lozad" src='<?= url('/theme/img/home/iconWatsVerde.svg'); ?>' title="Entrar em contato para fazer meu site" alt='Entrar em contato para fazer meu site'>
       <h1>61 99636-0059</h1>
     </div><!-- buttonHome -->
   </div><!-- Container -->
@@ -145,28 +145,28 @@
       <div class='projetoPortifolio'>
 
         <a href='http://kinow.epizy.com/?i=1' title="Quero um site bonito zucdeveloper">
-          <img id='site2' src='<?= url('/theme/img/portifolio/kinown.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
+          <img class="lozad" id='site2' src='<?= url('/theme/img/portifolio/kinown.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
         </a>
         <a href='http://www.beautif.ga/' title="Quero um site bonito zucdeveloper">
-          <img id='site2' src='<?= url('/theme/img/portifolio/beautif.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
+          <img class="lozad" id='site2' src='<?= url('/theme/img/portifolio/beautif.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
         </a>
         <a href='http://www.girlys.ga/?i=1'>
-          <img id='site2' src='<?= url('/theme/img/portifolio/girlys.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
+          <img class="lozad" id='site2' src='<?= url('/theme/img/portifolio/girlys.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
         </a>
         <a href='http://www.itsys.ga/?i=1'>
-          <img id='site2' src='<?= url('/theme/img/portifolio/itsys.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
+          <img class="lozad" id='site2' src='<?= url('/theme/img/portifolio/itsys.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
         </a>
         <a href='http://www.scenica.ga/?i=1'>
-          <img id='site2' src='<?= url('/theme/img/portifolio/scenica.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
+          <img class="lozad" id='site2' src='<?= url('/theme/img/portifolio/scenica.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
         </a>
         <a href='http://bluesk.ga/'>
-          <img id='site2' src='<?= url('/theme/img/portifolio/bluesk.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
+          <img class="lozad" id='site2' src='<?= url('/theme/img/portifolio/bluesk.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
         </a>
         <a href='http://tastys.ga/'>
-          <img id='site2' src='<?= url('/theme/img/portifolio/tastys.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
+          <img class="lozad" id='site2' src='<?= url('/theme/img/portifolio/tastys.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
         </a>
         <a href='http://www.beblack.ga/?i=1'>
-          <img id='site1' src='<?= url('/theme/img/portifolio/site1.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
+          <img class="lozad" id='site1' src='<?= url('/theme/img/portifolio/site1.jpg'); ?>' title="Sites disponiveis" alt='Sites disponiveis' srcset='' width='100%'>
         </a>
         </><!-- projetosPortifolio -->
       </div><!-- Projetos -->
@@ -186,24 +186,24 @@
     <div class='imgRedes'>
       <a href='https://www.facebook.com/zuc.dev.9' title="Link para o Facebook">
         <div class='iconRede'>
-          <img src='<?= url('/theme/img/iconTop/iconFace.svg'); ?>'title="Orçamento de sites sem compromisso" alt='Orçamento de sites sem compromisso' srcset=''>
+          <img class="lozad" src='<?= url('/theme/img/iconTop/iconFace.svg'); ?>'title="Orçamento de sites sem compromisso" alt='Orçamento de sites sem compromisso' srcset=''>
           <h1>Facebook</h1>
         </div>
       </a>
       <a href="https://www.linkedin.com/in/ant%C3%B4nio-jr-250a841b5/" title="Sites personalizados em Javasript, HTML, CSS">
         <div class='iconRede'>
-          <img src='<?= url('/theme/img/iconTop/iconLinked.svg'); ?>' alt='Orçamento de blog sem compromisso' alt='Orçamento de blog sem compromisso' srcset=''>
+          <img class="lozad" src='<?= url('/theme/img/iconTop/iconLinked.svg'); ?>' title='Orçamento de blog sem compromisso' alt='Orçamento de blog sem compromisso' srcset=''>
           <h1>Linked</h1>
         </div>
       </a>
       <a href="https://www.instagram.com/zucdeveloper" title="Zucdeveloper criação de layouts personalizados">
         <div class='iconRede'>
-          <img src='<?= url('/theme/img/iconTop/iconInsta.svg'); ?>' title="Produção de sites e blogs personalizados" alt='Produção de sites e blogs personalizados' srcset=''>
+          <img class="lozad" src='<?= url('/theme/img/iconTop/iconInsta.svg'); ?>' title="Produção de sites e blogs personalizados" alt='Produção de sites e blogs personalizados' srcset=''>
           <h1>Instagram</h1>
         </div>
       </a>
       <div class='iconRede' onclick='abrirWats()'>
-        <img src='<?= url('/theme/img/iconTop/iconWats.svg'); ?>' title="Sites personalizados com SEO otimizados" alt='Sites personalizados com SEO otimizados' srcset=''>
+        <img class="lozad" src='<?= url('/theme/img/iconTop/iconWats.svg'); ?>' title="Sites personalizados com SEO otimizados" alt='Sites personalizados com SEO otimizados' srcset=''>
         <h1>WatsApp</h1>
       </div>
     </div>
@@ -220,19 +220,19 @@
     <div class='contatoMensagem'>
       <div class='informacao'>
         <div class='layoutInformacao'>
-          <img src='<?= url('/theme/img/sectionSubHome/friends.svg'); ?>' title="Produção de sites em Brasilia-DF" alt='Produção de sites em Brasilia-DF' srcset='' width='50px'>
+          <img class="lozad" src='<?= url('/theme/img/sectionSubHome/friends.svg'); ?>' title="Produção de sites em Brasilia-DF" alt='Produção de sites em Brasilia-DF' srcset='' width='50px'>
           <h1>Brasilia-DF Samambaia-Sul<br>
             72308-107</h1>
         </div>
         <a href='mailto:zucdeveloper@gmail.com?subject=Hello' title="Faça um Orçamento de site personalizado a sua personalidade">
           <div class='layoutInformacao'>
-            <img src='<?= url('/theme/img/contato/iconCarta.svg'); ?>' title="Produção de sites em Brasilia-DF" alt='Produção de sites em Brasilia-DF' srcset='' width='50px'>
+            <img class="lozad" src='<?= url('/theme/img/contato/iconCarta.svg'); ?>' title="Produção de sites em Brasilia-DF" alt='Produção de sites em Brasilia-DF' srcset='' width='50px'>
             <h1>zucdeveloper@gmail.com</h1>
           </div>
         </a>
         <a href='' title="Abrir whatsapp para orçamento de sites">
           <div class='layoutInformacao cursor' onclick='abrirWats()'>
-            <img src='<?= url('/theme/img/contato/iconTel.svg'); ?>' title="Faça uma orçamento sem compromisso" alt='Faça uma orçamento sem compromisso' srcset='' width='50px'>
+            <img class="lozad" src='<?= url('/theme/img/contato/iconTel.svg'); ?>' title="Faça uma orçamento sem compromisso" alt='Faça uma orçamento sem compromisso' srcset='' width='50px'>
             <h1>61 99636-0059</h1>
           </div>
         </a>
@@ -285,6 +285,6 @@
 <script src='<?= url('/theme/script/form.js'); ?>'></script>
 <script src='<?= url('/theme/script/bannerHome.js'); ?>'></script>
 <script src='<?= url('/theme/script/carousel.js'); ?>'></script>
-
+<script src='<?= url('/theme/script/posload.js'); ?>'></script>
 <?php $v->end();
 ?>
