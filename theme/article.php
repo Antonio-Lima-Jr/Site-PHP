@@ -1,5 +1,6 @@
 <?php
   use Source\Support\DateFormat;
+  use Source\Support\TratURI;
   $v->layout( '_theme' );
 ?>
 <?= $v->start( 'style' ) ?>
@@ -26,10 +27,7 @@ fjs.parentNode.insertBefore(js, fjs);
 <div class='container'>
   <div class='blogMain'>
 
-    <?php if($post): 
-       $urlTratamento = str_replace('.', '', $post->title);
-       $urlTratamento = str_replace(' ', '-', $urlTratamento);
-      ?>
+    <?php if($post): ?>
 
       <article>
         <img src="<?= url('/'.$post->cover); ?>" title="<?= $post->title; ?>" alt="<?= $post->title; ?>">
@@ -40,7 +38,7 @@ fjs.parentNode.insertBefore(js, fjs);
           <div><?= $post->body ?></div>
           <!-- Your share button code -->
 <div class="fb-share-button" 
-data-href="<?= url("/blog"."/".$urlTratamento) ?>" 
+data-href="<?= url("/blog"."/".$uri) ?>" 
 data-layout="button_count">
 </div>
         </div>
@@ -67,8 +65,7 @@ data-layout="button_count">
 <?php
   if ( $posts ):
     foreach ( $posts as $postis ):
-      $urlTratamento = str_replace('.', '', $postis->title);
-      $urlTratamento = str_replace(' ', '-', $urlTratamento);
+      $urlTratamento = TratURI::getDbUri($postis->title);
 ?>
 
      <a href="<?= url("/blog/{$urlTratamento}"); ?>" title="<?= $postis->title; ?>" ><p><?= $postis->title; ?></p></a> 
@@ -118,3 +115,4 @@ data-layout="button_count">
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v8.0" nonce="LhRpZXbN"></script>
 <?php $v->end(); ?>
+use Source\Support\TratURI;

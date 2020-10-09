@@ -76,7 +76,8 @@ class Blog
         echo $this->view->render("article", [
           "head" => $head,
           "post" => $post,
-          "posts" => $posts
+          "posts" => $posts,
+          "uri" => $urlTratamentoServer
         ]);
       }
     }
