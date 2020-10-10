@@ -18,7 +18,6 @@ class TratURI
     $subPor1 = str_replace("-", "1", $result);
     $titulo = filter_var( $subPor1, FILTER_SANITIZE_STRIPPED);
     $result = str_replace("1", "-",$titulo);
-    $result = self::tirarAcentos( $result);
     $result = mb_strtolower($result);
 
 
