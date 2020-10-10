@@ -2,11 +2,11 @@
 body{
   background-color: #DDDDDD;
 }
-.fb-share-button{
-  position: relative;
-
-left: 50px;
-margin-top: 50px;
+.redes-article-bonito{
+  display: grid;
+  grid-template-columns: 60px 80px;
+  justify-content: end;
+  margin-top: 35px;
 }
 .bannerBlog{
   width: 100%;
@@ -57,7 +57,7 @@ article h1.tituloArticle{
   padding: 20px;
   color: rgb(122, 122, 122);
   font-weight: 400;
-  margin-top: 60px;
+  margin-top: 15px;
   } 
 article h1{
 padding: 40px;
