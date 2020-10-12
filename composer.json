@@ -30,6 +30,7 @@
         "coffeecode/router": "1.0.*",
         "league/plates": "v4.0.0-alpha",
         "coffeecode/optimizer": "2.0.*",
-        "monolog/monolog": "2.0.*"
+        "monolog/monolog": "2.0.*",
+        "lcobucci/jwt": "^3.3"
     }
 }

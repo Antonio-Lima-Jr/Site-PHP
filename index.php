@@ -1,5 +1,8 @@
 <?php
 
+date_default_timezone_set('America/Sao_Paulo');
+session_start();
+
 require __DIR__ . '/vendor/autoload.php';
 
 use CoffeeCode\Router\Router;
@@ -36,6 +39,24 @@ $router->get( "/", "Blog:home");
 $router->get( "/{titulo}", "Blog:article");
 $router->post( "/coments", "Blog:coments");
 $router->post( "/getcoments", "Blog:getComents");
+
+/**
+ * Autenticação
+ */
+$router->group( "login" );
+$router->get('/', 'Dashboard:login');
+$router->get('/dashboard', 'Dashboard:dashboard');
+$router->get('/composeblog', 'Dashboard:composeBlog');
+
+/**
+ * AJAX
+ * autorização
+ */
+$router->post('/authoriz', 'Dashboard:autorizar');
+/**
+ * Salvar Artigo no banco de dados
+ */
+$router->post('/composeblog/save', 'Dashboard:savePost');
 
 
 /**
