@@ -7,45 +7,44 @@ use Lcobucci\JWT\Signer\Key;
 use Lcobucci\JWT\ValidationData;
 use Lcobucci\JWT\Signer\Hmac\Sha256;
 
-class JWTSecure  
+class JWTSecure
 {
 
   /**
    * Algoritimo
    */
-  private $signer;
-  /**
-   * TOKEN
-   */
-  private $token;
-  /**
+    private $signer;
+    /**
+     * TOKEN
+     */
+    private $token;
+    /**
+     * Parser
+     */
+    private $parser;
+    /**
+     * Validate
+     */
+    private $data;
+    /**
+     * ID
+     */
+    private $id;
+    /**
    * Class constructor.
    */
-  /**
-   * Parser
-   */
-  private $parser;
-  /**
-   * Validate
-   */
-  private $data;
-  /**
-   * ID
-   */
-  private $id;
-  public function __construct()
-  {
-    $this->data = new ValidationData();
-    $this->id = "teste";
-    
-  }
+    public function __construct()
+    {
+        $this->data = new ValidationData();
+        $this->id = "teste";
+        $this->signer = new Sha256();
+    }
 
-  public function autenticar($email, $nome, $cargo, $id)
-  {
-
-    $signer = new Sha256();
-    $now = time();
-    $this->token = (new Builder ())
+    public function autenticar($email, $nome, $cargo, $id)
+    {
+        
+        $now = time();
+        $this->token = (new Builder())
                     // Configures the issuer (iss claim)
                     // Nome da API que gerou este Token
                     ->issuedBy(url())
@@ -59,7 +58,7 @@ class JWTSecure
                     // Configures the time that the token can be used (nbf claim)
                     ->canOnlyBeUsedAfter($now)
                     // Configures the expiration time of the token (exp claim)
-                    ->expiresAt($now + 60)
+                    ->expiresAt($now + ((60* 60)*16))
                     // Configures a new claim, called "uid"
                     ->withClaim('uid', $id)
                     ->withClaim('email', $email)
@@ -67,27 +66,45 @@ class JWTSecure
                     ->withClaim('cargo', $cargo)
                     
                     // Builds a new token
-                    ->getToken($signer, new Key(KEY));
+                    ->getToken($this->signer, new Key(KEY));
 
-    return  $this->token ;
-  }
-  public function find($headers){
-    $auth = $headers['Authorization'];
-    
-    if (preg_match('/Bearer\s(\S+)/', $auth, $matches)) {
-        $parse = (new Parser())->parse((string) $matches[1]);
-        
-        $this->data->setIssuer(url());
-        $this->data->setAudience('admin');
-        $this->data->setId($this->id);
-        
-    
-      
-
-        return $parse->validate($this->data);
-    }else{
-        echo 'nope';
+        return  $this->token ;
     }
-  }
-
+    public function find($headers)
+    {
+        $auth = $headers['Authorization'];
+    
+        if (preg_match('/Bearer\s(\S+)/', $auth, $matches)) {
+            // transforma o JWT em Token
+            $parse = (new Parser())->parse((string) $matches[1]);
+            // verificar se este jwt foi feito com a chave e alghoritmo de cripto do servidor
+            if($parse->verify($this->signer, KEY )){
+            
+                $this->data->setIssuer(url());
+                $this->data->setAudience('admin');
+                $this->data->setId($this->id);
+                // verificar se existe estas informaçoes no token
+               return $parse->validate($this->data);
+                
+                
+            }else{
+                return "nope";
+            }
+        } else {
+            return "nope";
+        }
+    }
+    public function pegarInfo($headers)
+    {
+        $auth = $headers['Authorization'];
+    
+        if (preg_match('/Bearer\s(\S+)/', $auth, $matches)) {
+            // transforma o JWT em Token
+            $parse = (new Parser())->parse((string) $matches[1]);
+            // verificar se este jwt foi feito com a chave e alghoritmo de cripto do servidor
+            return $parse->getClaims();
+        } else {
+            return "nope";
+        }
+    }
 }

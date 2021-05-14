@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+
+
+
+<url>
+
+  <loc>https://www.zucdeveloper.com/</loc>
+
+  <lastmod>2020-10-07T00:32:11+00:00</lastmod>
+
+</url>
+
+<url>
+
+  <loc>https://www.zucdeveloper.com/sobre</loc>
+
+  <lastmod>2020-10-07T00:32:11+00:00</lastmod>
+
+</url>
+
+<url>
+
+  <loc>https://www.zucdeveloper.com/blog</loc>
+
+  <lastmod>2020-10-07T00:32:11+00:00</lastmod>
+
+</url>
+
+<url>
+
+  <loc>https://www.zucdeveloper.com/blog/a-importancia-de-um-site-para-seu-negocio</loc>
+
+  <lastmod>2020-10-07T00:32:11+00:00</lastmod>
+
+</url>
+
+<url>
+
+  <loc>https://www.zucdeveloper.com/blog/conheca-algumas-vantagens-de-usar-jwt-json-web-token</loc>
+
+  <lastmod>2020-10-07T00:32:11+00:00</lastmod>
+
+</url>
+
+</urlset>

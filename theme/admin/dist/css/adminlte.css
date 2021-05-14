@@ -31288,4 +31288,57 @@ a.text-muted:hover {
 [class*="accent-"] a.btn-dark {
   color: #fff;
 }
+div.email{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+div.box-email{
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr 1fr 1fr;
+  justify-items: center;
+  border-bottom: 1px solid #0069D9;
+}
+div.box-email div{
+padding: 5px 15px 10px 15px;
+}
+div.box-email{
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr 1fr 1fr;
+  justify-items: center;
+  border-bottom: 1px solid #0069D9;
+
+}
+@media screen and (max-width: 500px){
+  div.box-email{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+}
+loader{
+  display:none;
+  position: fixed;
+  margin: auto auto;
+  width: max-content;
+  top:50%;
+  left:50%;
+  transform: translate3d(-50%,-50%,0px);
+  z-index: 1200;
+}
+.alert-success{
+  position: fixed;
+  top:50%;
+  left: 50%;
+  transform: translate3d(-50%,-50%,0px);
+  z-index: 1200;
+  display: none;
+}
+.alert-danger{
+  position: fixed;
+  top:50%;
+  left: 50%;
+  transform: translate3d(-50%,-50%,0px);
+  z-index: 1200;
+ display:none;
+}
 /*# sourceMappingURL=adminlte.css.map */

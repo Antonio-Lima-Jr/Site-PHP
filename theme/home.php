@@ -18,7 +18,7 @@
       </div><!-- textoHome -->
       <div class='imgHome'>
         <div id='nuvem'>
-          <img src='<?= url('/theme/img/home/nuvemHome.png'); ?>' title="Market com SEO otimizado" alt='Market com SEO otimizado' srcset='' width='200px'>
+          <!-- <img src='<?= url('/theme/img/home/nuvemHome.png'); ?>' title="Market com SEO otimizado" alt='Market com SEO otimizado' srcset='' width='200px'> -->
         </div>
 
         <div class='homeDevices'>

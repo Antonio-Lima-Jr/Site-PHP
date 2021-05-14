@@ -8,11 +8,12 @@
 <?= $v->end() ?>
 
 <!-- Content Header (Page header) -->
+<?php if (isset($post)){echo "<postid data-id='".$post->id."'/>";}; ?>
 <section class="content-header">
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h1>Post Blog</h1>
+        <h1 id="page" >Blog Post</h1>
       </div>
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
@@ -71,14 +72,14 @@
           <!-- /.card-header -->
           <div class="card-body">
             <div class="form-group">
-              <input class="form-control titulo-post" name="titulo" placeholder="Titulo">
+              <input class="form-control titulo-post" name="titulo" <?php if (isset($post)){echo "value='".$post->title."'";}; ?> placeholder="Titulo">
             </div>
             <div class="form-group">
-              <input class="form-control descricao-post" name="descricao" placeholder="Descrição">
+              <input class="form-control descricao-post" <?php if (isset($post)){echo "value='".$post->description."'";}; ?> name="descricao" placeholder="Descrição">
             </div>
             <div class="form-group">
               <textarea id="compose-textarea" class="form-control" style="height: 500px">
-
+              <?php if (isset($post)){echo $post->body;}; ?>
               </textarea>
             </div>
             <div class="form-group">
@@ -130,9 +131,8 @@ $('input[type=file]').change(function(){
    cover = cover[1].value.replace('fakepath', 'blogImages');
    cover = cover.replaceAll("\\", '/');
    cover = cover.replace('C:', '');
-   console.log('cover :>> ', cover);
-});
-
+ 
+})
 
 $("button[type=submit]").click(function(e) {
   e.preventDefault();
@@ -140,7 +140,18 @@ $("button[type=submit]").click(function(e) {
   const descricao = $(".descricao-post").val();
 
   const conteudo = $('.note-editable').html();
-
+  var idPost;
+if ($("postid").length) { 
+    var idPost = $("postid").data("id")
+    var data = {
+    id : idPost,
+    titulo: titulo,
+    descricao: descricao,
+    conteudo: conteudo,
+    cover: cover
+  }
+  data = JSON.stringify(data);
+} else {
   var data = {
    titulo: titulo,
    descricao: descricao,
@@ -148,21 +159,42 @@ $("button[type=submit]").click(function(e) {
    cover: cover
   }
   data = JSON.stringify(data);
-  console.log(data);
+}
+
+  
+
 
   $.ajax({
-      url: INCLUDE_PATH + '/login/composeblog/save',
+      url: INCLUDE_PATH + '/dashboard/composeblog/save',
       dataType: 'json',
       type: 'POST',
       data: data,
       beforeSend: function() {
-        // $('.load').css('display', 'block');
+        $('loader').css('display', 'block');
+
+
       },
       complete: function() {
-        // $('.load').css('display', 'none');
+      
+        $('loader').css('display', 'none');
+
       },
       success: function(data) {
-       console.log(data);
+
+        if(data.success === true){
+          $(".alert-success").text(data.mensagem)
+          $(".alert-success").fadeIn();
+          setTimeout(() => {
+            $(".alert-success").fadeOut()
+          }, 3000);
+        } else {
+          $(".alert-danger").text(data.mensagem)
+          $(".alert-danger").fadeIn();
+          setTimeout(() => {
+            $(".alert-danger").fadeOut()
+          }, 3000);
+        }
+
       },
       
   });    

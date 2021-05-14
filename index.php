@@ -43,10 +43,14 @@ $router->post( "/getcoments", "Blog:getComents");
 /**
  * Autenticação
  */
-$router->group( "login" );
+$router->group("dashboard");
 $router->get('/', 'Dashboard:login');
-$router->get('/dashboard', 'Dashboard:dashboard');
+$router->get('/home', 'Dashboard:dashboard');
 $router->get('/composeblog', 'Dashboard:composeBlog');
+$router->get('/listblog', 'Dashboard:listblog');
+$router->get('/composeblog/alterarpost/{id}', 'Dashboard:alterarPost');
+
+$router->get('/logout', 'Dashboard:logout');
 
 /**
  * AJAX
@@ -57,6 +61,7 @@ $router->post('/authoriz', 'Dashboard:autorizar');
  * Salvar Artigo no banco de dados
  */
 $router->post('/composeblog/save', 'Dashboard:savePost');
+$router->post('/composeblog/delete', 'Dashboard:deletePost');
 
 
 /**

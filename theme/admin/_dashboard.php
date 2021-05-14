@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= url("/theme/admin/dist/css/adminlte.css"); ?>">
+  <link rel="shortcut icon" href="<?= url("/theme/img/favicon.ico"); ?>" />
   <?=  $v->section("style");?>
 </head>
 <!--
@@ -26,6 +27,15 @@
 -->
 <body class="hold-transition sidebar-mini">
 <base base="<?= url() ?>">
+<loader><img src="<?= url("/theme/admin/dist/img/loader.gif") ?>" alt=""></loader>
+<!-- Button trigger modal-->
+
+<div class="alert alert-success" role="alert">
+  A simple success alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  A simple danger alert—check it out!
+</div>
 <div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -66,7 +76,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="<?= url("/theme/img/Logo.png") ?>" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -82,7 +92,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="<?= url("/theme/img/Logo.png") ?>" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -98,7 +108,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="<?= url("/theme/img/Logo.png") ?>" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -158,8 +168,8 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="<?= url("/login/dashboard"); ?>" class="brand-link">
-      <img src="<?= url("/theme/img/logo.png"); ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <a href="<?= url("/dashboard/home"); ?>" class="brand-link">
+      <img src="<?= url("/theme/img/Logo.png"); ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">ZucDeveloper</span>
     </a>
 
@@ -168,10 +178,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?= url("/theme/img/logo.png"); ?>" class="img-circle elevation-2" alt="User Image">
+          <img src="<?= url("/theme/img/Logo.png"); ?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Antônio Jr</a>
+          <a href="" class="d-block"><?= $info["nome"] . " - ". $info["cargo"]; ?></a>
         </div>
       </div>
 
@@ -192,8 +202,8 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item">
+            <a id="blog" href="" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Blog
@@ -202,21 +212,15 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= url("/login/composeblog"); ?>" class="nav-link">
+                <a id="post" href="<?= url("/dashboard/composeblog"); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Post</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a id="lista" href="<?= url("/dashboard/listblog"); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Alterar</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>deletar</p>
                 </a>
               </li>
             </ul>
@@ -350,8 +354,22 @@
 
 <!-- AdminLTE for demo purposes -->
 <script src="<?= url("/theme/admin/dist/js/demo.js"); ?>"></script>
+<script>
+const page = $("#page").text()
+const resultado = page.split(" ");
+
+if (resultado[0] === "Blog") {
+  $("a#blog").addClass("active")
+  if(resultado[1] === "Post"){
+    $("a#post").addClass("active")
+  }
+  if(resultado[1] === "Lista"){
+    $("a#lista").addClass("active")
+  }
+}
 
 
+</script>
 <?=  $v->section("js");?>
 </body>
 </html>

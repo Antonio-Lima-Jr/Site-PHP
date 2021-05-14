@@ -13,6 +13,6 @@ class Admin extends DataLayer
    */
   public function __construct()
   {
-    parent::__construct("Admin", ["email", "senha"]);
+    parent::__construct("admin", ["email", "senha"]);
   }
 }

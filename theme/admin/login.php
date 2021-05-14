@@ -20,6 +20,15 @@
 
 <body class="hold-transition login-page">
 <base base="<?= url(); ?>">
+<loader><img src="<?= url("/theme/admin/dist/img/loader.gif") ?>" alt=""></loader>
+<!-- Button trigger modal-->
+
+<div class="alert alert-success" role="alert">
+  A simple success alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  A simple danger alert—check it out!
+</div>
 
 <div class="login-box">
   <div class="login-logo">
@@ -109,26 +118,33 @@ $('form').on("submit" , function(e) {
 
 
   $.ajax({
-      url: INCLUDE_PATH + '/login/authoriz',
+      url: INCLUDE_PATH + '/dashboard/authoriz',
       dataType: 'json',
       type: 'POST',
       data: data,
       beforeSend: function() {
-        // $('.load').css('display', 'block');
+        $('loader').css('display', 'block');
       },
-      complete: function(jqXHR, textStatus) {
-        console.log("jqXHR do Complete" + jqXHR + textStatus)
+      complete: function() {
+        $('loader').css('display', 'none');
       },
       success: function(data) {
-        var objs = data
-        localStorage.setItem("Authorization",objs.Authorization);
-        window.location.href = objs.locale
-      },
-      error: function(error){
-            console.log('error: ' + error) //exibe na aba console do navegador
-            //ou
-
+        if(data.success === true){
+          localStorage.setItem("Authorization",data.Authorization);
+          if (data.locale){
+          window.location.href = data.locale
         }
+        } else {
+          $(".alert-danger").text(data.mensagem)
+          $(".alert-danger").fadeIn();
+          setTimeout(() => {
+            $(".alert-danger").fadeOut()
+          }, 3000);
+        }
+       
+     
+        
+      }
       
   }).done(function (e) {
     console.log('e do DONE :>> '+ e);
